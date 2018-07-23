@@ -1,5 +1,5 @@
 #!/bin/bash
 
 if [ "{{ cookiecutter.pip_install }}" = "y" ]; then
-    pip install -e .
+    pip install -U -e .
 fi
