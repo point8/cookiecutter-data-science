@@ -2,6 +2,7 @@
     "project_name": "project_name",
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "module_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "pip_install": ["y", "n"],
     "author_name": "Point 8 GmbH",
     "email": "kontakt@point-8.de",
     "description": "A short description of the project.",
