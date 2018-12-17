@@ -26,7 +26,7 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter https://github.com/drivendata/cookiecutter-data-science
+    cookiecutter https://github.com/point8/cookiecutter-data-science
 
 
 [![asciicast](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02.png)](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02)
@@ -37,34 +37,24 @@ $ conda install cookiecutter
 
 The directory structure of your new project looks like this: 
 
-```
-├── LICENSE
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for analysis.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- Documentation of the project.
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── figures            <- Generated figures, plots, etc.
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
-│   │
-│   ├── data           <- Scripts to download or generate data
-│   │
-│   └── plot           <- Scripts for visualizations
-```
+    {repo_name}
+    ├── LICENSE
+    ├── README.md
+    ├── data
+    │   ├── interim             <- Intermediate data that has been transformed.
+    │   ├── processed           <- The final, canonical data sets for analysis.
+    │   └── raw                 <- The original, immutable data dump.
+    ├── docs                    <- Documentation of the project.
+    ├── figures                 <- Generated figures, plots, etc.
+    ├── notebooks               <- Jupyter notebooks. Naming convention is a number (for ordering), the creator's initials and a sort `-` delimiter    │   └── quickstart.ipynb
+    ├── references              <- Data dictionaries, manuals, and all other explanatory materials.
+    ├── setup.py
+    └── {module_name}           <- Source code for use in this project.
+        ├── __init__.py
+        ├── analysis            <- Code for analysis on the final datasets
+        ├── data                <- Code to read, write and preprocess data
+        └── plots               <- Code for visualization
+
 
 ## Contributing
 
