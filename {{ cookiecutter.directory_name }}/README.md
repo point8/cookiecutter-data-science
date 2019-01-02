@@ -1,7 +1,7 @@
-{{cookiecutter.project_name}}
+{{cookiecutter.readme_header}}
 ==============================
 
-{{cookiecutter.description}}
+{{cookiecutter.readme_description}}
 
 Project Organization
 ------------

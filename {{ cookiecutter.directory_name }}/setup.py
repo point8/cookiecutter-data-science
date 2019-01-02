@@ -16,7 +16,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='{{ cookiecutter.module_name }}',
-    description="{{ cookiecutter.description }}",
+    description="{{ cookiecutter.readme_description }}",
     author="{{ cookiecutter.author_name.replace('\"', '\\\"') }}",
     author_email='{{ cookiecutter.email }}',
     classifiers=[

@@ -1,9 +1,8 @@
-{
-    "project_name": "project_name",
-    "description": "A short description of the project.",
-    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-    "module_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+{   "directory_name": "new_project",
+    "module_name": "{{ cookiecutter.directory_name.lower().replace(' ', '_') + '_module'}}",
     "pip_install": ["y", "n"],
+    "readme_header": "{{ cookiecutter.directory_name }}",
+    "readme_description": "A short description of the project.",
     "author_name": "Point 8 GmbH",
     "email": "kontakt@point-8.de",
     "open_source_license": ["No license file", "MIT", "BSD-3-Clause"]
