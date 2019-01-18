@@ -28,7 +28,7 @@ $ conda install cookiecutter
 
 From the directory, where you want to create a new folder for your project write
 
-``cookiecutter https://github.com/point8/cookiecutter-data-science``
+    ``cookiecutter https://github.com/point8/cookiecutter-data-science``
 
 to initialize your new project. You will be prompted to enter values for the settings of the template. The default value, which is set when you enter nothing, is always shown in `[ ]` behind the parameter. These settings are:
 
