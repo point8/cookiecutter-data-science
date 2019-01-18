@@ -23,11 +23,23 @@ $ conda install cookiecutter
 ```
 
 
-### To start a new project, run:
+### To start a new project:
 ------------
 
-    cookiecutter https://github.com/point8/cookiecutter-data-science
+From the directory, where you want to create a new folder for your project write
 
+``cookiecutter https://github.com/point8/cookiecutter-data-science``
+
+to initialize your new project. You will be prompted to enter values for the settings of the template. The default value, which is set when you enter nothing, is always shown in `[ ]` behind the parameter. These settings are:
+
+* **directory_name** [*new_project*]: Name of your project's directory
+* **module_name** [entered *directory_name* + *_module*]: Name of your pip installable module
+* **pip_install** [*yes*]: Whether to directly pip install the new project module. If chosen, the module is directly installed in development mode via ``pip install -e``
+* **readme_header** [entered *directory_name*]: Name of your project in the README.md file.
+* **readme_description** [*A short description of the project.*]: Description of your project in the README.md file.
+* **author_name** [*Point 8 GmbH*]: Author referenced in the module
+* **email** [*kontakt@point-8.de*]: Email referenced in the module
+* **open_source_license** [*No license*]: Choose whether to have a license file and which
 
 [![asciicast](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02.png)](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02)
 
@@ -37,24 +49,35 @@ $ conda install cookiecutter
 
 The directory structure of your new project looks like this: 
 
-    {repo_name}
+    {directory_name}
     ├── LICENSE
     ├── README.md
     ├── data
-    │   ├── interim             <- Intermediate data that has been transformed.
-    │   ├── processed           <- The final, canonical data sets for analysis.
-    │   └── raw                 <- The original, immutable data dump.
-    ├── docs                    <- Documentation of the project.
-    ├── figures                 <- Generated figures, plots, etc.
-    ├── notebooks               <- Jupyter notebooks. Naming convention is a number (for ordering), the creator's initials and a sort `-` delimiter    │   └── quickstart.ipynb
-    ├── references              <- Data dictionaries, manuals, and all other explanatory materials.
+    │   ├── interim
+    │   ├── processed
+    │   └── raw
+    ├── docs
+    ├── figures
+    ├── notebooks
+    │   └── quickstart.ipynb
+    ├── references
     ├── setup.py
-    └── {module_name}           <- Source code for use in this project.
-        ├── __init__.py
-        ├── analysis            <- Code for analysis on the final datasets
-        ├── data                <- Code to read, write and preprocess data
-        └── plots               <- Code for visualization
+    ├── {module_name}
+    │   ├── __init__.py
+    │   ├── analysis
+    │   ├── data
+    │   └── plot
 
+* **data** can contain any data used in the project with three subdirectories for differnt purposes. All content is excluded in the project's `.gitignore` to not share any data with git.
+    * **raw** should contain the raw, unprocessed data of the project
+    * **interim** should cointain datasets, which are created in steps during the preprocessing
+    * **processed** should contain the final processed datasets, on which actual analysis tasks are performed
+* **docs** should contain anything for the documentation of the project
+* **figures** should contain any sort of results like plots or reports of the project's analysis
+* **references** should contain any additional information relevant to the project
+* **{module_name}/analysis** should contain code for analysis on the processed data
+* **{module_name}/data** should contain code for processing data for the project
+* **{module_name}/plot** should contain code for visualization of the project's analyses
 
 ## Contributing
 
